@@ -20,3 +20,5 @@ if __name__ == "__main__":
 	logdir=args['output_events_path']
 	train_writer = tf.summary.FileWriter(logdir)
 	train_writer.add_graph(sess.graph)
+	train_writer.flush()
+	train_writer.close()
